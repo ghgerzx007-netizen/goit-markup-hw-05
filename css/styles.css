@@ -499,6 +499,7 @@ gap: 120px;
         background-color:transparent; 
         color: #FFFFFF;
         padding-right: 24px;
+        padding-left: 16px;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subcribe-footer:focus,
@@ -526,14 +527,14 @@ gap: 120px;
             color:#FFFFFF;
             display: flex;
                 align-items: center;
-                gap: 24px;
+                gap: 16px;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-btn:hover,
 .footer-form-btn:focus
 {
-background-color: #31d0aa;
+border-color: #31d0aa;
 }
 
 .icon-sub
@@ -613,7 +614,6 @@ padding: 72px 24px 24px 24px;
     border: 4px;
     cursor: pointer;
     border-radius: 50%;
-        fill: #e7e9fc;
         stroke-width: 1px;
         stroke: rgba(0, 0, 0, 0.1);
         display: flex;
@@ -623,11 +623,16 @@ padding: 72px 24px 24px 24px;
 .close-button:hover,
 .close-button:focus
 {
- fill: #404bbf;
+ background-color: #404bbf;
 }
 .button-back
 {
-    fill:#2E2F42
+    fill:#2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+.button-back:hover{
+    fill:#e7e9fc;
 }
 .modal-text {
     font-weight: 500;
@@ -638,6 +643,7 @@ padding: 72px 24px 24px 24px;
         color: #2e2f42;
         margin-bottom: 16px;
 }
+
 .modal-input {
     border: 1px solid rgba(46, 47, 66, 0.4);
         border-radius: 4px;
@@ -655,16 +661,16 @@ padding: 72px 24px 24px 24px;
         line-height: 1.16667;
         letter-spacing: 0.04em;
         color: #8e8f99;
+        
 }
-
+.modal-input:focus+.modal-icon  {
+    fill: #4d5ae5;
+}
 .modal-input:focus
 {
     border-color: #4d5ae5;
 }
-.modal-input:focus + .modal-icon use
-{
-    fill: #4d5ae5;
-}
+
 .modal-lable
 {
     display: block;
@@ -698,12 +704,19 @@ left: 16px;
         border-radius: 4px;
         background-color: transparent;
         resize: none;
-        padding: 8px 16px
+        padding: 8px 16px;
+        outline: none;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-text:focus
+{
+ border-color: #4d5ae5;
 }
 .modal-check:checked + .modal-check-label span
 {
     background-color: #4d5ae5;
-    border: none;
+    
 }
 
 .modal-check-label
@@ -739,7 +752,11 @@ font-weight: 400;
 }
 .checkbox-icon
 {
-    fill: #FFFFFF
+    fill: #FFFFFF;
+    opacity: 0;
+}
+.modal-check:checked+.modal-check-label .checkbox-icon {
+    opacity: 1;
 }
 .submit-button {
     font-weight: 500;
