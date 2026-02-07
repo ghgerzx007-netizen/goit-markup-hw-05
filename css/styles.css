@@ -463,6 +463,7 @@ display: flex;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
 .icons-footer a:hover,
 .icons-footer a:focus
 {
@@ -475,7 +476,9 @@ footer .container
 align-items: baseline;
 justify-content: flex-start;
 flex-direction: row;
-gap: 120px;
+}
+.icons-footer-wrapper {
+    margin-left: 120px;
 }
 .social-icons-footer {
   display: flex;
@@ -489,6 +492,10 @@ gap: 120px;
     display: flex;
     align-items: center;
     gap: 24px;
+}
+.subcribe
+{
+    margin-left: auto;
 }
 .subcribe-footer
 {
@@ -534,14 +541,14 @@ gap: 120px;
 .footer-form-btn:hover,
 .footer-form-btn:focus
 {
-border-color: #31d0aa;
+background-color: #31d0aa;
 }
 
 .icon-sub
 {
     fill:#FFFFFF;
     width: 24px;
-   justify-content: left;
+   
 }
 .title-footer
 {
@@ -550,7 +557,7 @@ border-color: #31d0aa;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 text-align: start;
 justify-content: start;
 }
@@ -611,29 +618,31 @@ padding: 72px 24px 24px 24px;
     top: 24px;
     right: 24px;
     fill: #e7e9fc;
-    border: 4px;
     cursor: pointer;
     border-radius: 50%;
-        stroke-width: 1px;
-        stroke: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
         display: flex;
       align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
-.close-button:hover,
-.close-button:focus
+.close-button:hover .button-back,
+.close-button:focus .button-back {
+    fill: #ffffff;
+    border: none;
+}
+.close-button:focus,
+.close-button:hover
 {
- background-color: #404bbf;
+    background-color: #404bbf;
+    border:none;
 }
 .button-back
 {
     fill:#2E2F42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-.button-back:hover{
-    fill:#e7e9fc;
-}
 .modal-text {
     font-weight: 500;
         font-size: 16px;
@@ -696,6 +705,10 @@ left: 16px;
 .modal-field {
     margin-bottom: 8px;
 }
+.modal-field-comment
+{
+    margin-bottom: 16px;
+}
 .modal-input-text
 {
     height: 120px;
@@ -715,15 +728,17 @@ left: 16px;
 }
 .modal-check:checked + .modal-check-label span
 {
-    background-color: #4d5ae5;
+    background-color: #404bbf;
+        border: none;
     
 }
+
 
 .modal-check-label
 {
 font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.33;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: flex;
@@ -756,6 +771,7 @@ font-weight: 400;
     opacity: 0;
 }
 .modal-check:checked+.modal-check-label .checkbox-icon {
+    background-color:#404bbf ;
     opacity: 1;
 }
 .submit-button {
@@ -781,6 +797,4 @@ font-weight: 400;
 {
 background-color:#404bbf;
 }
-
-
 
