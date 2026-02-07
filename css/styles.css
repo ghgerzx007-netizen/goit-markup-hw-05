@@ -638,7 +638,7 @@ padding: 72px 24px 24px 24px;
         display: flex;
       align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+background-color: #E7E9FC;
 }
 .close-button:hover .button-back,
 .close-button:focus .button-back {
